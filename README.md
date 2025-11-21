@@ -9,13 +9,13 @@ This project contains C programs and explanations from Lab 5.
 4- a README.md file
 5- a license file
 
-## How to Build
+### How to 
 make
+then
 
-## How to Run
-./process_creation
-./output_program
-./simple_program
+-./process_creation
+-./output_program
+-./simple_program
 
 ## Check dynamic libraries
 ldd simple_program
