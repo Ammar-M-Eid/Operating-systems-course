@@ -1,0 +1,89 @@
+
+Assignment 2 - text to Explain the code from lab 5 and aswer Qs.
+Ammar M. Eid
+
+
+
+1. process_creation.c (fork) Exercise 1
+--------------------------------------------------
+the fork() creates a new process called the child process.
+
+How it works:
+fork() duplicates the current running process into two: Parent and child 
+Both processes continue running the same code, but each prints a different message based on the value returned by fork().
+
+What the code does:
+The child prints: "This is the child process. PID: pid"
+The parent prints: "This is the parent process. PID: pid"
+If fork fails, a message is printed.
+
+
+
+
+2. file1.c and file2.c (Linker) Exersise 2
+------------------------------------------------------
+
+file1.c:
+Contains a function hello() that prints a message.
+
+
+file2.c:
+Declares the function hello().
+Calls hello() inside main().
+
+
+When both files are compiled together using:
+    gcc file1.c file2.c -o output_program
+the linker:
+Connects file2.c's function call to hello()
+Combines both files and return the resualt
+ 
+This shows how multi-file programs work in C.
+
+
+3.simple_program.c (Loader + ldd)
+---------------------------------------------------------
+
+This program simply prints:
+    "This is a simple program."
+
+compiled:
+    gcc simple_program.c -o simple_program
+
+Using:
+    ldd simple_program
+
+shows which libraries are loaded into memory
+when the program runs.
+
+This shows the role of the loader.
+
+
+4. Linker
+--------------------------------------------------------------
+
+The linker:
+- Combines multiple compiled files
+- handle function calls between files
+- Produces a single final executable
+
+example:
+file1.c + file2.c = output_program
+
+
+5. Loader 
+-------------------------------------------------------------
+
+The loader:
+Loads the compiled program into memory
+Loads required shared libraries and Sets up the runtime environment
+Starts the program execution at main()
+
+ldd shows the libraries the loader will load.
+
+
+6.Terminal Commands
+------------------------------------------------------------
+gcc to compile C programs
+process management (sleep, kill, jobs)
+
